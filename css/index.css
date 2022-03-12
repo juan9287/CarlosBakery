@@ -1,0 +1,505 @@
+/*imports*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@1,100&display=swap');
+
+/*variables*/
+
+:root {
+    --principal: #F2EDE5;
+    --secondari: #0b0c0d;
+    --font-primary: 'Bebas Neue', cursive;
+    --font-secondary: 'Montserrat', sans-serif;
+}
+
+/*normalize*/
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*globals*/
+
+html {
+    font-size: 62.5%;
+    font-family: var(--font-primary);
+    color: var(--secondari);
+    
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondari);
+    display: inline-block;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/*helpers*/
+
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* BACKROUND INDEX*/
+.index {
+    background-image: url(../Imagenes/panaderia2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+}
+
+/*HEADER*/
+
+.header_bakery {
+    background: rgba(242, 237, 229, 0.5);
+    min-height: 10vh;
+    width: 100%;
+
+
+
+
+}
+
+.header_bakery__menu {
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+    width: 100%;
+    
+
+
+
+
+}
+
+.header_bakery__logo a img {
+    height: 80px;
+
+
+}
+
+.header_bakery__marca img {
+    height: 20px;
+    align-self: center;
+
+
+
+}
+
+.logo_marca {
+    flex-basis: 30%;
+
+}
+
+.header_bakery__nav {
+    flex-basis: 50%;
+    justify-content: space-between;
+    font-size: 1.7em;
+    color: var(--secondari);
+}
+
+/* contenido */
+.principal_bakery {
+    position: relative;
+    align-content: center;
+    height: 85vh;
+}
+
+.principal_bakery__logo {
+    align-content: center;
+    margin: auto;
+}
+
+.principal_bakery__logo img {
+    height: 20vh;
+    background: rgba(242, 237, 229, 0.5);
+    border-radius: 10px;
+}
+
+/*footer*/
+
+.footer_bakery {
+    background: rgba(242, 237, 229, 0.5);
+    height: 5vh;
+    align-content: space-between;
+    width: 100%;
+    
+
+
+}
+
+.footer_bakery__nav {
+
+    justify-content: space-between;
+    line-height: 0%;
+    height: 100%;
+
+
+}
+
+.footer_bakery__nav h3 {
+    font: var(--font-primary);
+    color: black;
+    font-size: 1.7em;
+    flex-basis: 60%;
+    align-self: center;
+    
+    
+
+
+
+}
+
+.footer_bakery__nav__redes li a {
+    height: 0;
+
+
+}
+
+.footer_bakery__nav__redes a img {
+    height: 5VH;
+    line-height: 0%;
+
+
+}
+
+.footer_bakery__nav__redes {
+    flex-basis: 40%;
+    justify-content: space-between;
+    height: 5VH;
+}
+
+/* BACKROUND about us*/
+.aboutus {
+    background-image: url(../Imagenes/baguette.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+}
+
+/* Principal About Us*/
+
+.main_about_us {
+    height: 85vh;
+    align-content: center;
+}
+
+.main_about_us__cont {
+    align-items: center;
+    width: 100%;
+
+    justify-content: space-between;
+}
+
+.main_about_us__cont__img {
+    height: 600px;
+}
+
+.main_about_us__cont__img img {
+    height: 100%;
+    border: #0b0c0d solid 5px;
+}
+
+.main_about_us__cont__text {
+    height: 600px;
+    width: 472px;
+    background-color: rgba(242, 237, 229, 0.5);
+    font-size: 1.7em;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.texto_historia {
+    padding: 20px;
+}
+
+/* Products */
+
+.products {
+    background-image: url(../Imagenes/marmol.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+
+}
+
+.products_img {
+    height: 85vh;
+    display: grid;
+    grid-template-areas:
+        "pan cat tor"
+        "pan conf conf";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50% 50%;
+    gap: 20px;
+    padding: 20px 0 40px 0;
+    position: relative;
+}
+
+.panificados {
+    grid-area: pan;
+}
+
+.catering {
+    grid-area: cat;
+}
+
+.tortas {
+    grid-area: tor;
+}
+
+.confiteria {
+    grid-area: conf;
+}
+
+.grid_items {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.grid_items img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.products_img h2 {
+    font-size: 4.0em;
+    -webkit-text-fill-color: #F2EDE5;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: rgba(11, 12, 13, 0.5);
+    line-height: 0px;
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+}
+
+/*contact us*/
+
+.body_contact_us {
+    background-image: url(../Imagenes/bread-table.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+
+
+}
+
+.main_contact_us {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    align-self: center;
+    grid-template-rows: auto auto;
+    align-content:center;
+    gap:10rem;
+    
+
+
+}
+
+.main_contact_us h1 {
+    justify-self: center;
+    align-self: center;
+    font-size: 5.0em;
+    color: var(--principal);
+    letter-spacing: 2px;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: rgba(11, 12, 13, 0.8);
+}
+
+.contact_us {
+    justify-content: space-between;
+    height: auto;
+    
+}
+
+.contact_us__redes {
+    gap: 3rem;
+}
+
+.contact_us__redes img {
+    height: 50px;
+    filter: invert(88%) sepia(2%) saturate(925%) hue-rotate(341deg) brightness(111%) contrast(90%);
+
+}
+
+.contact_us__redes a {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+    font-family: var(--font-secondary);
+
+
+
+}
+
+.items a h2 {
+    font-size: 2.0em;
+    color: var(--principal);
+
+}
+
+.contact_us nav {
+
+    flex-basis: 30%;
+}
+
+/* formulario*/
+
+.contact_us__form {
+    
+    width: fit-content;
+    gap: 1rem;
+    justify-content: space-around;
+
+}
+
+.informacion {
+    
+    width: 31rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: #F2EDE5 1px solid;
+}
+
+.contact_us textarea {
+    height: 12rem;
+    width: 31rem;
+    font-weight: bold;
+    background: none;
+    border: none;
+    border-bottom: #F2EDE5 1px solid;
+
+
+}
+
+.contact_us textarea::placeholder {
+    color: rgba(242, 237, 229, 0.5);
+    font-family: var(--font-secondary);
+    ;
+}
+
+.contact_us input::placeholder {
+    color: rgba(242, 237, 229, 0.5);
+    font-family: var(--font-secondary);
+
+}
+
+.boton_send {
+    background-color: rgba(242, 237, 229, 0.8);
+
+    width: 10rem;
+    align-self: center;
+    font-family: var(--font-primary);
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 535px) {
+    .contact_us {
+        
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 2rem;
+        gap:10rem;
+        
+    }
+
+    .contact_us__redes {
+        flex-grow: 1;
+        flex-wrap: wrap;
+        align-content: center;
+        
+    }
+
+    .contact_us__form {
+        flex-grow: 1;
+        order: -1;
+        align-items: center;
+       
+    }
+    
+    .footer_bakery{
+        flex-wrap: wrap;
+
+    }
+    .header_bakery__menu{
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    .header_bakery{
+       height: 20vh;
+       flex-wrap: wrap;
+     
+       
+    }
+    .header_bakery__nav{
+        font-size: 1.5em;
+        gap:2rem;
+        flex-basis: auto;
+    }
+    .main_contact_us {
+        gap:0
+    }
+
+    /*RESPONSIVE PRODUCTS*/
+    .products_img {
+        display: flex;
+        flex-direction: column;
+        height: fit-content; }
+
+
+    .grid_items img {
+        height: 25rem;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 40px;
+        padding: 0 1rem;
+        }
+
+
+        
+        
+       
+
+ 
+
+   
+}
+ 

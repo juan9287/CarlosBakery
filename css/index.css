@@ -27,7 +27,7 @@ html {
     font-size: 62.5%;
     font-family: var(--font-primary);
     color: var(--secondari);
-    
+
 }
 
 ul {
@@ -80,21 +80,19 @@ body {
     width: 100%;
     animation-name: animacion_header;
     animation-duration: 2s;
-    
+
     animation-iteration-count: 1;
 
 }
 
-.animate__animated .animate__bounceInLeft{
-    animation-duration: 31s;
-}
+
 
 .header_bakery__menu {
     justify-content: space-between;
     align-items: center;
     min-height: 10vh;
     width: 100%;
-    
+
 
 
 
@@ -125,19 +123,20 @@ body {
     justify-content: space-between;
     font-size: 1.7em;
     color: var(--secondari);
-    
+
 }
-.header_bakery__nav__link a{
-    
+
+.header_bakery__nav__link a {
+
     text-decoration: none;
     transition: all 1s;
-  
+
 }
 
 .header_bakery__nav__link a:hover {
     text-decoration: underline 2px rgb(0, 0, 0) solid;
-    transform: scale(1.5,1.5);
-    
+    transform: scale(1.5, 1.5);
+
 
 
 
@@ -168,7 +167,7 @@ body {
     height: 5vh;
     align-content: space-between;
     width: 100%;
-    
+
 
 
 }
@@ -188,8 +187,8 @@ body {
     font-size: 1.7em;
     flex-basis: 60%;
     align-self: center;
-    
-    
+
+
 
 
 
@@ -344,9 +343,9 @@ body {
     width: 100%;
     align-self: center;
     grid-template-rows: auto auto;
-    align-content:center;
-    gap:10rem;
-    
+    align-content: center;
+    gap: 10rem;
+
 
 
 }
@@ -364,7 +363,7 @@ body {
 .contact_us {
     justify-content: space-between;
     height: auto;
-    
+
 }
 
 .contact_us__redes {
@@ -402,7 +401,7 @@ body {
 /* formulario*/
 
 .contact_us__form {
-    
+
     width: fit-content;
     gap: 1rem;
     justify-content: space-around;
@@ -410,7 +409,7 @@ body {
 }
 
 .informacion {
-    
+
     width: 31rem;
     font-weight: bold;
     border: none;
@@ -453,57 +452,62 @@ body {
 
 @media screen and (max-width: 535px) {
     .contact_us {
-        
+
         flex-wrap: wrap;
         justify-content: space-around;
         padding: 2rem;
-        gap:10rem;
-        
+        gap: 10rem;
+
     }
 
     .contact_us__redes {
         flex-grow: 1;
         flex-wrap: wrap;
         align-content: center;
-        
+
     }
 
     .contact_us__form {
         flex-grow: 1;
         order: -1;
         align-items: center;
-       
+
     }
-    
-    .footer_bakery{
+
+    .footer_bakery {
         flex-wrap: wrap;
 
     }
-    .header_bakery__menu{
+
+    .header_bakery__menu {
         flex-wrap: wrap;
         justify-content: center;
-        
+
     }
-    .header_bakery{
-       height: 20vh;
-       flex-wrap: wrap;
-     
-       
+
+    .header_bakery {
+        height: 20vh;
+        flex-wrap: wrap;
+
+
     }
-    .header_bakery__nav{
+
+    .header_bakery__nav {
         font-size: 1.5em;
-        gap:2rem;
+        gap: 2rem;
         flex-basis: auto;
     }
+
     .main_contact_us {
-        gap:0
+        gap: 0
     }
 
     /*RESPONSIVE PRODUCTS*/
     .products_img {
         display: flex;
         flex-direction: column;
-        height: fit-content; }
+        height: fit-content;
+    }
 
 
     .grid_items img {
@@ -512,15 +516,14 @@ body {
         object-fit: cover;
         border-radius: 40px;
         padding: 0 1rem;
-        }
+    }
 
 
-        
-        
-       
 
- 
 
-   
+
+
+
+
+
 }
- 

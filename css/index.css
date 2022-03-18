@@ -44,6 +44,8 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    font-family: inherit;
+    color: inherit;
 }
 
 /*helpers*/
@@ -60,15 +62,17 @@ body {
 .container {
     max-width: 1080px;
     margin: 0 auto;
+
 }
 
 /* BACKROUND INDEX*/
 .index {
     background-image: url(../Imagenes/panaderia2.jpg);
-    background-position: center;
     background-size: cover;
-    height: 100vh;
-    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
 
 }
 
@@ -136,6 +140,7 @@ body {
 .header_bakery__nav__link a:hover {
     text-decoration: underline 2px rgb(0, 0, 0) solid;
     transform: scale(1.5, 1.5);
+    color: var(--secondari);
 
 
 
@@ -150,14 +155,17 @@ body {
 }
 
 .principal_bakery__logo {
-    align-content: center;
-    margin: auto;
+
+    width: auto;
+    height: auto;
+
 }
 
-.principal_bakery__logo img {
+.principal_bakery img {
     height: 20vh;
     background: rgba(242, 237, 229, 0.5);
     border-radius: 10px;
+    margin: auto;
 }
 
 /*footer*/
@@ -216,48 +224,56 @@ body {
 /* BACKROUND about us*/
 .aboutus {
     background-image: url(../Imagenes/baguette.jpg);
-    background-position: center;
     background-size: cover;
-    height: 100vh;
-    position: relative;
-
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* Principal About Us*/
 
 .main_about_us {
-    height: 85vh;
-    align-content: center;
-}
-
-.main_about_us__cont {
-    align-items: center;
     width: 100%;
-
+    align-items: center;
     justify-content: space-between;
+
+    gap: 2rem;
 }
 
 .main_about_us__cont__img {
-    height: 600px;
+    width: 50%;
+    width: 50rem;
 }
 
 .main_about_us__cont__img img {
-    height: 100%;
+    width: 100%;
     border: #0b0c0d solid 5px;
+
+
+
+}
+
+.texto_historia {
+    padding: 2rem;
+    gap: 3rem;
+    width: 100%;
 }
 
 .main_about_us__cont__text {
-    height: 600px;
-    width: 472px;
+    width: 50%;
     background-color: rgba(242, 237, 229, 0.5);
     font-size: 1.7em;
     justify-content: space-around;
     align-items: center;
+    width: 50rem;
+    height: 63rem;
 }
 
-.texto_historia {
-    padding: 20px;
+.main_about_us__cont__text h2 {
+    font-size: 3em;
 }
+
+
 
 /* Products */
 
@@ -450,7 +466,32 @@ body {
     border-radius: 5px;
 }
 
-@media screen and (max-width: 535px) {
+
+/* FIND US*/
+
+.backround_find_us {
+    background-image: url(../Imagenes/pancortado.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.info_ubicacion h2 {
+    font-size: 3.5em;
+
+
+}
+
+.info_ubicacion {
+    font-size: 2em;
+
+}
+
+
+
+
+@media screen and (max-width: 560px) {
     .contact_us {
 
         flex-wrap: wrap;
@@ -477,17 +518,20 @@ body {
     .footer_bakery {
         flex-wrap: wrap;
 
+
     }
 
     .header_bakery__menu {
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
+        gap: 3rem;
 
     }
 
     .header_bakery {
         height: 20vh;
         flex-wrap: wrap;
+
 
 
     }
@@ -501,6 +545,8 @@ body {
     .main_contact_us {
         gap: 0
     }
+
+
 
     /*RESPONSIVE PRODUCTS*/
     .products_img {
@@ -522,8 +568,37 @@ body {
 
 
 
+    .main_about_us__cont__img {
+
+        width: 100%;
+    }
+
+    .main_about_us__cont__text {
+        font-size: 1.5em;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+
+    .main_about_us {
 
 
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 2rem;
+    }
 
+}
+@media screen and (max-width: 650px){
+    .find_us__frame iframe {
+     width: 100%;
 
+    }
+    .find_us_main{
+        flex-direction: column;
+    }
+    
 }

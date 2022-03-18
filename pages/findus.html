@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/index.css">
+    
 </head>
 
-<body>
+<body class="backround_find_us">
     <header class="header_bakery ">
         <!--Header-->
-        <nav class="header_bakery__menu flex-row container animate__animated animate__bounceInLeft">
+        <nav class="header_bakery__menu flex-row container animate__animated animate__bounceInLeft ">
             <!--barra de navegacion-->
             <div class="logo_marca flex-row">
                 <picture class="header_bakery__logo ">
@@ -51,9 +53,25 @@
             </ul>
         </nav>
     </header>
-    <main>
-
+    
+    <main class="find_us_main align-items-center container row ">
+        <section class="find_us__frame col">
+            <iframe class="border border-dark border-5 rounded"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.9076137411694!2d-58.397680484767506!3d-34.70751008043275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd18966cee51%3A0x7f176f5dfdb594af!2sMinistro%20Brin%202988%2C%20B1826DYR%20Lan%C3%BAs%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1647214054349!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"" frameborder="0"></iframe>
+        </section>
+        <section class=" col" >
+            
+            <div class="info_ubicacion column bg-light bg-opacity-25"> 
+                <h2 class="align-self-center">UBICACION:</h2>
+                <p class="">Ministro Brin 2988. Buenos Aires, Lanus.</p>
+                <p class="">Estamos a 3 cuadras de la estacion Lanus</p>
+                <h2 class="align-self-center">Dias y Horarios:</h2>
+                <p class="">Martes a Domingo de 7.00 a 21.00</p>
+                <p class="">Contamos con delivery propio</p>
+            </div>
+        </section>
+        
     </main>
+
     <footer class="footer_bakery ">
         <!--Pie de pagina-->
         <nav class="footer_bakery__nav flex-row container">
@@ -85,7 +103,8 @@
             </ul>
         </nav>
     </footer>
-
+    <script src="../js/bootstrap.min.js"></script>
+    
 </body>
 
 </html>

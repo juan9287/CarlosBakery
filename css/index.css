@@ -1,335 +1,176 @@
+/*Variables*/
+/* variables */
+/*Globales*/
 /*imports*/
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@1,100&display=swap');
-
-/*variables*/
-
-:root {
-    --principal: #F2EDE5;
-    --secondari: #0b0c0d;
-    --font-primary: 'Bebas Neue', cursive;
-    --font-secondary: 'Montserrat', sans-serif;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@1,100&display=swap");
 /*normalize*/
-
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
 /*globals*/
-
 html {
-    font-size: 62.5%;
-    font-family: var(--font-primary);
-    color: var(--secondari);
-
-}
+  font-size: 62.5%;
+  font-family: "Bebas Neue", cursive;
+  color: #0b0c0d; }
 
 ul {
-    list-style: none;
-}
+  list-style: none; }
 
 a {
-    text-decoration: none;
-    color: var(--secondari);
-    display: inline-block;
-}
+  text-decoration: none;
+  color: #0b0c0d;
+  display: inline-block; }
 
 body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-    font-family: inherit;
-    color: inherit;
-}
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font-family: inherit;
+  color: inherit; }
 
 /*helpers*/
-
 .flex-row {
-    display: flex;
-}
+  display: flex; }
 
 .flex-column {
-    display: flex;
-    flex-direction: column;
-}
+  display: flex;
+  flex-direction: column; }
 
 .container {
-    max-width: 1080px;
-    margin: 0 auto;
+  max-width: 1080px;
+  margin: 0 auto; }
 
-}
-
-/* BACKROUND INDEX*/
-.index {
-    background-image: url(../Imagenes/panaderia2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-
-
-}
-
+/*Partials*/
 /*HEADER*/
-
 .header_bakery {
-    background: rgba(242, 237, 229, 0.5);
-    min-height: 10vh;
-    width: 100%;
-    animation-name: animacion_header;
-    animation-duration: 2s;
-
-    animation-iteration-count: 1;
-
-}
-
-
-
-.header_bakery__menu {
+  background: rgba(242, 237, 229, 0.5);
+  min-height: 10vh;
+  width: 100%;
+  animation-name: animacion_header;
+  animation-duration: 2s;
+  animation-iteration-count: 1; }
+  .header_bakery__menu {
     justify-content: space-between;
     align-items: center;
     min-height: 10vh;
-    width: 100%;
-
-
-
-
-
-}
-
-.header_bakery__logo a img {
-    height: 80px;
-
-
-}
-
-.header_bakery__marca img {
+    width: 100%; }
+  .header_bakery__logo a img {
+    height: 80px; }
+  .header_bakery__marca img {
     height: 20px;
-    align-self: center;
-
-
-
-}
-
-.logo_marca {
-    flex-basis: 30%;
-
-}
-
-.header_bakery__nav {
+    align-self: center; }
+  .header_bakery__logo_marca {
+    flex-basis: 30%; }
+  .header_bakery__nav {
     flex-basis: 50%;
     justify-content: space-between;
     font-size: 1.7em;
-    color: var(--secondari);
+    color: #0b0c0d; }
+    .header_bakery__nav__link a {
+      text-decoration: none;
+      transition: all 1s; }
+      .header_bakery__nav__link a:hover {
+        text-decoration: underline 2px black solid;
+        transform: scale(1.5, 1.5);
+        color: var(--secondari); }
 
-}
+/*footer*/
+.footer_bakery {
+  background: rgba(242, 237, 229, 0.5);
+  height: 5vh;
+  align-content: space-between;
+  width: 100%; }
+  .footer_bakery__nav {
+    justify-content: space-between;
+    line-height: 0%;
+    height: 100%; }
+    .footer_bakery__nav__redes {
+      flex-basis: 40%;
+      justify-content: space-between;
+      height: 5VH; }
+      .footer_bakery__nav__redes li a {
+        height: 0; }
+        .footer_bakery__nav__redes li a img {
+          height: 5VH;
+          line-height: 0%; }
+    .footer_bakery__nav h3 {
+      font: var(--font-primary);
+      color: black;
+      font-size: 1.7em;
+      flex-basis: 60%;
+      align-self: center; }
 
-.header_bakery__nav__link a {
-
-    text-decoration: none;
-    transition: all 1s;
-
-}
-
-.header_bakery__nav__link a:hover {
-    text-decoration: underline 2px rgb(0, 0, 0) solid;
-    transform: scale(1.5, 1.5);
-    color: var(--secondari);
-
-
-
-
-}
+/*Views*/
+/* BACKROUND INDEX*/
+.index {
+  background-image: url(../Imagenes/panaderia2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; }
 
 /* contenido */
 .principal_bakery {
-    position: relative;
-    align-content: center;
-    height: 85vh;
-}
-
-.principal_bakery__logo {
-
-    width: auto;
-    height: auto;
-
-}
-
-.principal_bakery img {
-    height: 20vh;
-    background: rgba(242, 237, 229, 0.5);
-    border-radius: 10px;
-    margin: auto;
-}
-
-/*footer*/
-
-.footer_bakery {
-    background: rgba(242, 237, 229, 0.5);
-    height: 5vh;
-    align-content: space-between;
-    width: 100%;
-
-
-
-}
-
-.footer_bakery__nav {
-
-    justify-content: space-between;
-    line-height: 0%;
-    height: 100%;
-
-
-}
-
-.footer_bakery__nav h3 {
-    font: var(--font-primary);
-    color: black;
-    font-size: 1.7em;
-    flex-basis: 60%;
-    align-self: center;
-
-
-
-
-
-}
-
-.footer_bakery__nav__redes li a {
-    height: 0;
-
-
-}
-
-.footer_bakery__nav__redes a img {
-    height: 5VH;
-    line-height: 0%;
-
-
-}
-
-.footer_bakery__nav__redes {
-    flex-basis: 40%;
-    justify-content: space-between;
-    height: 5VH;
-}
+  justify-content: center;
+  align-items: center; }
 
 /* BACKROUND about us*/
 .aboutus {
-    background-image: url(../Imagenes/baguette.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-}
+  background-image: url(../Imagenes/baguette.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; }
 
 /* Principal About Us*/
-
 .main_about_us {
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 2rem;
-}
-
-.main_about_us__cont__img {
-    width: 50%;
-    width: 50rem;
-}
-
-.main_about_us__cont__img img {
-    width: 100%;
-    border: #0b0c0d solid 5px;
-
-
-
-}
-
-.texto_historia {
-    padding: 2rem;
-    gap: 3rem;
-    width: 100%;
-}
-
-.main_about_us__cont__text {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem; }
+  .main_about_us__text {
     width: 50%;
     background-color: rgba(242, 237, 229, 0.5);
     font-size: 1.7em;
     justify-content: space-around;
     align-items: center;
     width: 50rem;
-    height: 63rem;
-}
-
-.main_about_us__cont__text h2 {
-    font-size: 3em;
-}
-
-
+    height: 63rem; }
+    .main_about_us__text__texto_historia {
+      padding: 2rem;
+      gap: 3rem;
+      width: 100%; }
+    .main_about_us__text h2 {
+      font-size: 3em; }
+  .main_about_us__img {
+    width: 50%;
+    width: 50rem; }
+    .main_about_us__img img {
+      width: 100%;
+      border: #0b0c0d solid 5px; }
 
 /* Products */
-
 .products {
-    background-image: url(../Imagenes/marmol.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
+  background-image: url(../Imagenes/marmol.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; }
 
-
-}
-
-.products_img {
-    height: 85vh;
-    display: grid;
-    grid-template-areas:
-        "pan cat tor"
-        "pan conf conf";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50% 50%;
-    gap: 20px;
-    padding: 20px 0 40px 0;
-    position: relative;
-}
-
-.panificados {
-    grid-area: pan;
-}
-
-.catering {
-    grid-area: cat;
-}
-
-.tortas {
-    grid-area: tor;
-}
-
-.confiteria {
-    grid-area: conf;
-}
-
-.grid_items {
-    height: 100%;
-    width: 100%;
-    position: relative;
-}
-
-.grid_items img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.products_img h2 {
+.main_products__img {
+  height: 85vh;
+  display: grid;
+  grid-template-areas: "pan cat tor" "pan conf conf";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50% 50%;
+  gap: 20px;
+  padding: 20px 0 40px 0;
+  position: relative; }
+  .main_products__img h2 {
     font-size: 4.0em;
     -webkit-text-fill-color: #F2EDE5;
     -webkit-text-stroke: 1px;
@@ -337,268 +178,175 @@ body {
     line-height: 0px;
     position: absolute;
     bottom: 40px;
-    left: 20px;
-}
-
-/*contact us*/
-
-.body_contact_us {
-    background-image: url(../Imagenes/bread-table.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-
-
-
-}
-
-.main_contact_us {
-    display: grid;
+    left: 20px; }
+  .main_products__img__panificados {
+    grid-area: pan; }
+  .main_products__img__catering {
+    grid-area: cat; }
+  .main_products__img__tortas {
+    grid-area: tor; }
+  .main_products__img__confiteria {
+    grid-area: conf; }
+  .main_products__img .grid_items {
     height: 100%;
     width: 100%;
-    align-self: center;
-    grid-template-rows: auto auto;
-    align-content: center;
-    gap: 10rem;
+    position: relative; }
+    .main_products__img .grid_items img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px; }
 
+/*contact us*/
+.body_contact_us {
+  background-image: url(../Imagenes/bread-table.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; }
 
-
-}
-
-.main_contact_us h1 {
+.main_contact_us {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  align-self: center;
+  grid-template-rows: auto auto;
+  align-content: center;
+  gap: 10rem; }
+  .main_contact_us h1 {
     justify-self: center;
     align-self: center;
     font-size: 5.0em;
-    color: var(--principal);
+    color: #F2EDE5;
     letter-spacing: 2px;
     -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: rgba(11, 12, 13, 0.8);
-}
-
-.contact_us {
+    -webkit-text-stroke-color: rgba(11, 12, 13, 0.8); }
+  .main_contact_us__section {
     justify-content: space-between;
     height: auto;
-
-}
-
-.contact_us__redes {
-    gap: 3rem;
-}
-
-.contact_us__redes img {
-    height: 50px;
-    filter: invert(88%) sepia(2%) saturate(925%) hue-rotate(341deg) brightness(111%) contrast(90%);
-
-}
-
-.contact_us__redes a {
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 2rem;
-    font-family: var(--font-secondary);
-
-
-
-}
-
-.items a h2 {
-    font-size: 2.0em;
-    color: var(--principal);
-
-}
-
-.contact_us nav {
-
-    flex-basis: 30%;
-}
-
-/* formulario*/
-
-.contact_us__form {
-
-    width: fit-content;
-    gap: 1rem;
-    justify-content: space-around;
-
-}
-
-.informacion {
-
-    width: 31rem;
-    font-weight: bold;
-    border: none;
-    outline: none;
-    background: none;
-    border-bottom: #F2EDE5 1px solid;
-}
-
-.contact_us textarea {
-    height: 12rem;
-    width: 31rem;
-    font-weight: bold;
-    background: none;
-    border: none;
-    border-bottom: #F2EDE5 1px solid;
-
-
-}
-
-.contact_us textarea::placeholder {
-    color: rgba(242, 237, 229, 0.5);
-    font-family: var(--font-secondary);
-    ;
-}
-
-.contact_us input::placeholder {
-    color: rgba(242, 237, 229, 0.5);
-    font-family: var(--font-secondary);
-
-}
-
-.boton_send {
-    background-color: rgba(242, 237, 229, 0.8);
-
-    width: 10rem;
-    align-self: center;
-    font-family: var(--font-primary);
-    border-radius: 5px;
-}
-
+    /* formulario*/ }
+    .main_contact_us__section__redes {
+      gap: 3rem; }
+      .main_contact_us__section__redes img {
+        height: 50px;
+        filter: invert(88%) sepia(2%) saturate(925%) hue-rotate(341deg) brightness(111%) contrast(90%); }
+      .main_contact_us__section__redes a {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 2rem;
+        font-family: "Montserrat", sans-serif; }
+      .main_contact_us__section__redes .items a h2 {
+        font-size: 2.0em;
+        color: #F2EDE5; }
+    .main_contact_us__section__form {
+      width: fit-content;
+      gap: 1rem;
+      justify-content: space-around; }
+      .main_contact_us__section__form .informacion {
+        width: 31rem;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        background: none;
+        border-bottom: #F2EDE5 1px solid; }
+      .main_contact_us__section__form textarea {
+        height: 12rem;
+        width: 31rem;
+        font-weight: bold;
+        background: none;
+        border: none;
+        border-bottom: #F2EDE5 1px solid; }
+        .main_contact_us__section__form textarea::placeholder {
+          color: rgba(242, 237, 229, 0.5);
+          font-family: "Montserrat", sans-serif; }
+      .main_contact_us__section__form input::placeholder {
+        color: rgba(242, 237, 229, 0.5);
+        font-family: "Montserrat", sans-serif; }
+      .main_contact_us__section__form .boton_send {
+        background-color: rgba(242, 237, 229, 0.8);
+        width: 10rem;
+        align-self: center;
+        font-family: "Bebas Neue", cursive;
+        border-radius: 5px; }
 
 /* FIND US*/
-
 .backround_find_us {
-    background-image: url(../Imagenes/pancortado.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-.info_ubicacion h2 {
-    font-size: 3.5em;
-
-
-}
+  background-image: url(../Imagenes/pancortado.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; }
 
 .info_ubicacion {
-    font-size: 2em;
+  font-size: 2em; }
+  .info_ubicacion h2 {
+    font-size: 3.5em; }
 
-}
-
-
-
-
+/*Querys*/
 @media screen and (max-width: 560px) {
-    .contact_us {
-
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 2rem;
-        gap: 10rem;
-
-    }
-
-    .contact_us__redes {
-        flex-grow: 1;
-        flex-wrap: wrap;
-        align-content: center;
-
-    }
-
-    .contact_us__form {
-        flex-grow: 1;
-        order: -1;
-        align-items: center;
-
-    }
-
-    .footer_bakery {
-        flex-wrap: wrap;
-
-
-    }
-
-    .header_bakery__menu {
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 3rem;
-
-    }
-
-    .header_bakery {
-        height: 20vh;
-        flex-wrap: wrap;
-
-
-
-    }
-
-    .header_bakery__nav {
-        font-size: 1.5em;
-        gap: 2rem;
-        flex-basis: auto;
-    }
-
-    .main_contact_us {
-        gap: 0
-    }
-
-
-
-    /*RESPONSIVE PRODUCTS*/
-    .products_img {
-        display: flex;
-        flex-direction: column;
-        height: fit-content;
-    }
-
-
-    .grid_items img {
-        height: 25rem;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 40px;
-        padding: 0 1rem;
-    }
-
-
-
-
-
-    .main_about_us__cont__img {
-
-        width: 100%;
-    }
-
-    .main_about_us__cont__text {
-        font-size: 1.5em;
-        width: 100%;
-    }
-}
+  /*header responsive*/
+  .header_bakery__menu {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 3rem; }
+  .header_bakery {
+    flex-wrap: wrap; }
+  .header_bakery__nav {
+    font-size: 1.5em;
+    gap: 2rem;
+    flex-basis: auto; }
+  /* index responsive*/
+  .principal_bakery {
+    justify-content: center;
+    align-items: center;
+    width: 100%; }
+    .principal_bakery__img {
+      width: 100%; }
+  /*contacr us responsive*/
+  .main_contact_us__section {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+    gap: 10rem; }
+  .main_contact_us__section__redes {
+    flex-grow: 1;
+    flex-wrap: wrap;
+    align-content: center; }
+  .main_contact_us__section__form {
+    flex-grow: 1;
+    order: -1;
+    align-items: center; }
+  .main_contact_us {
+    gap: 0; }
+  /*RESPONSIVE PRODUCTS*/
+  .main_products__img {
+    display: flex;
+    flex-direction: column;
+    height: fit-content; }
+  .main_products__img .grid_items img {
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+    padding: 0 1rem; }
+  /*About US responsive*/
+  .main_about_us__img {
+    width: 100%; }
+  .main_about_us__text {
+    font-size: 1.5em;
+    width: 100%; } }
 
 @media screen and (max-width: 1040px) {
+  .main_about_us {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem; } }
 
-    .main_about_us {
-
-
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 2rem;
-        padding: 2rem;
-    }
-
-}
-@media screen and (max-width: 650px){
-    .find_us__frame iframe {
-     width: 100%;
-
-    }
-    .find_us_main{
-        flex-direction: column;
-    }
-    
-}
+@media screen and (max-width: 650px) {
+  .find_us__frame iframe {
+    width: 100%; }
+  .find_us_main {
+    flex-direction: column; } }

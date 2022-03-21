@@ -1,0 +1,72 @@
+/* Products */
+
+.products {
+    background-image: url(../Imagenes/marmol.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+
+}
+
+.main_products__img {
+    height: 85vh;
+    display: grid;
+    grid-template-areas:
+        "pan cat tor"
+        "pan conf conf";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50% 50%;
+    gap: 20px;
+    padding: 20px 0 40px 0;
+    position: relative;
+    
+    & h2 {
+        font-size: 4.0em;
+        -webkit-text-fill-color: #F2EDE5;
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: rgba(11, 12, 13, 0.5);
+        line-height: 0px;
+        position: absolute;
+        bottom: 40px;
+        left: 20px;
+    }
+
+    &__panificados {
+        grid-area: pan;
+    }
+    
+    &__catering {
+        grid-area: cat;
+    }
+    
+    &__tortas {
+        grid-area: tor;
+    }
+    
+    &__confiteria {
+        grid-area: conf;
+    }
+
+    .grid_items {
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+
+/*imports*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@1,100&display=swap');
+
+/*normalize*/
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*globals*/
+
+html {
+    font-size: 62.5%;
+    font-family: $font-primary;
+    color: $secondari;
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $secondari;
+    display: inline-block;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-family: inherit;
+    color: inherit;
+}

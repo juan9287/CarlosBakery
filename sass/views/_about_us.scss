@@ -1,0 +1,58 @@
+/* BACKROUND about us*/
+.aboutus {
+    background-image: url(../Imagenes/baguette.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Principal About Us*/
+
+.main_about_us {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+
+    &__text {
+        width: 50%;
+        background-color: rgba(242, 237, 229, 0.5);
+        font-size: 1.7em;
+        justify-content: space-around;
+        align-items: center;
+        width: 50rem;
+        height: 63rem;
+
+        &__texto_historia {
+            padding: 2rem;
+            gap: 3rem;
+            width: 100%;
+        }
+        & h2 {
+            font-size: 3em;
+        }
+    }
+    
+    &__img {
+        width: 50%;
+        width: 50rem;
+
+        & img {
+            width: 100%;
+            border: #0b0c0d solid 5px;
+        
+        }
+    }
+
+    
+}
+
+
+
+
+
+
+
+

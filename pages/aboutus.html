@@ -13,45 +13,55 @@
 
 <body class="aboutus">
 
-    <header class="header_bakery  ">
+    <header class="header_bakery navbar navbar-expand-md navbar-default">
         <!--Header-->
-        <nav class="header_bakery__menu flex-row container animate__animated animate__bounceInLeft">
-            <!--barra de navegacion-->
-            <div class="logo_marca flex-row">
-                <picture class="header_bakery__logo ">
+        <nav class="navbar  navbar-light   header_bakery__menu  container animate__animated animate__bounceInLeft   ">
+            <!--barra de navegacion-->            
+
+            <div class=" header_bakery__logo_marca flex-row">
+                <picture class="navbar-brand header_bakery__logo ">
                     <!--imagenes header-->
                     <a href="../index.html" class="header_bakery__link">
                         <img src="../Imagenes/gorro.png" alt="imagen_gorro">
                     </a>
                 </picture>
-                <picture class="header_bakery__marca flex-row">
+                <picture class="navbar-brand header_bakery__marca flex-row">
                     <img src="../Imagenes/marca.png" alt="imagen_texto">
                 </picture>
-            </div>
+            </div>            
+            <button class="navbar-toggler  navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
 
-            <ul class="header_bakery__nav flex-row">
-                <li class="header_bakery__nav__link">
-                    <a href="../pages/aboutus.html">
-                        ABOUT US
-                    </a>
-                </li>
-                <li class="header_bakery__nav__link">
-                    <a href="../pages/products.html">
-                        PRODUCTS
-                    </a>
-                </li>
-                <li class="header_bakery__nav__link">
-                    <a href="../pages/contactus.html">
-                        CONTACT US
-                    </a>
-                </li>
-                <li class="header_bakery__nav__link">
-                    <a href="../pages/findus.html">
-                        FIND US
-                    </a>
-                </li>
-            </ul>
+            
+            
+           
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav dropdown-menu-left mr-auto header_bakery__nav ">
+                    <li class="navbar-item header_bakery__nav__link">
+                        <a class="navbar-link" href="./aboutus.html">
+                            ABOUT US
+                        </a>
+                    </li>
+                    <li class="navbar-item header_bakery__nav__link">
+                        <a class="navbar-link" href="./products.html">
+                            PRODUCTS
+                        </a>
+                    </li>
+                    <li class="navbar-item header_bakery__nav__link">
+                        <a class="navbar-link"href="./contactus.html">
+                            CONTACT US
+                        </a>
+                    </li>
+                    <li class="navbar-item header_bakery__nav__link">
+                        <a class="navbar-link"href="./findus.html">
+                            FIND US
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
+
     </header>
     <main class="main_about_us container flex-row">
 

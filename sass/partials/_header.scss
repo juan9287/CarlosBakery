@@ -13,6 +13,10 @@
         align-items: center;
         min-height: 10vh;
         width: 100%;
+        
+        
+
+        
     
     
     
@@ -36,10 +40,14 @@
     
     }
     &__nav {
-        flex-basis: 50%;
-        justify-content: space-between;
+        justify-content: space-around;
+        flex-basis: 80%;
         font-size: 1.7em;
         color: $secondari;
+        padding: 0 3rem;
+        gap: 2rem;
+        
+        
 
         &__link a {
 
@@ -63,9 +71,20 @@
     }
 }
 
-
-
-
+.navbar{
+    flex-wrap: nowrap;
+}
+.nav{
+    flex-wrap: nowrap;
+}
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    
+}
+.navbar>.container{
+    flex-wrap: wrap;
+}
 
 
 

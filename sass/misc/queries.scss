@@ -2,7 +2,7 @@
 
     /*header responsive*/
 
-    .header_bakery__menu {
+   /* .header_bakery__menu {
         flex-wrap: wrap;
         justify-content: space-around;
         gap: 3rem;
@@ -21,7 +21,7 @@
         font-size: 1.5em;
         gap: 2rem;
         flex-basis: auto;
-    }
+    }*/
 
     /* index responsive*/
 
@@ -128,3 +128,13 @@
         flex-direction: column;
     }
 }
+@media screen and (max-width:768px){
+    .navbar>.container{
+     
+        justify-content: center;
+    }
+}
+            
+
+    
+        

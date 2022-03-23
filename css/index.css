@@ -66,10 +66,12 @@ body {
   .header_bakery__logo_marca {
     flex-basis: 30%; }
   .header_bakery__nav {
-    flex-basis: 50%;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-basis: 80%;
     font-size: 1.7em;
-    color: #0b0c0d; }
+    color: #0b0c0d;
+    padding: 0 3rem;
+    gap: 2rem; }
     .header_bakery__nav__link a {
       text-decoration: none;
       transition: all 1s; }
@@ -77,6 +79,19 @@ body {
         text-decoration: underline 2px black solid;
         transform: scale(1.5, 1.5);
         color: var(--secondari); }
+
+.navbar {
+  flex-wrap: nowrap; }
+
+.nav {
+  flex-wrap: nowrap; }
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row; }
+
+.navbar > .container {
+  flex-wrap: wrap; }
 
 /*footer*/
 .footer_bakery {
@@ -286,16 +301,26 @@ body {
 /*Querys*/
 @media screen and (max-width: 560px) {
   /*header responsive*/
-  .header_bakery__menu {
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 3rem; }
-  .header_bakery {
-    flex-wrap: wrap; }
-  .header_bakery__nav {
-    font-size: 1.5em;
-    gap: 2rem;
-    flex-basis: auto; }
+  /* .header_bakery__menu {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 3rem;
+
+    }
+
+    .header_bakery {
+        
+        flex-wrap: wrap;
+
+
+
+    }
+
+    .header_bakery__nav {
+        font-size: 1.5em;
+        gap: 2rem;
+        flex-basis: auto;
+    }*/
   /* index responsive*/
   .principal_bakery {
     justify-content: center;
@@ -350,3 +375,7 @@ body {
     width: 100%; }
   .find_us_main {
     flex-direction: column; } }
+
+@media screen and (max-width: 768px) {
+  .navbar > .container {
+    justify-content: center; } }

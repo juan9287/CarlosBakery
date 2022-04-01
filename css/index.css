@@ -1,5 +1,7 @@
 /*Variables*/
 /* variables */
+/*MAPA REDES*/
+/*MAPA FONT_SIZE*/
 /*Globales*/
 /*imports*/
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@1,100&display=swap");
@@ -32,6 +34,12 @@ body {
   font-family: inherit;
   color: inherit; }
 
+.navbar {
+  padding: 0; }
+
+ol, ul {
+  padding-left: 0; }
+
 /*helpers*/
 .flex-row {
   display: flex; }
@@ -44,6 +52,43 @@ body {
   max-width: 1080px;
   margin: 0 auto; }
 
+/*BACKROUND DE TODAS LAS PAGINAS*/
+.baguette {
+  background-image: url("../imagenes/baguette.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; }
+
+.breadtable {
+  background-image: url("../imagenes/breadtable.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; }
+
+.pancortado {
+  background-image: url("../imagenes/pancortado.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; }
+
+.panaderia2 {
+  background-image: url("../imagenes/panaderia2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; }
+
+.marmol {
+  background-image: url("../imagenes/marmol.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; }
+
+/*MIXIN HOVER TEXT PRODUCTOS */
 /*Partials*/
 /*HEADER*/
 .header_bakery {
@@ -120,26 +165,10 @@ body {
       align-self: center; }
 
 /*Views*/
-/* BACKROUND INDEX*/
-.index {
-  background-image: url(../Imagenes/panaderia2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed; }
-
 /* contenido */
 .principal_bakery {
   justify-content: center;
   align-items: center; }
-
-/* BACKROUND about us*/
-.aboutus {
-  background-image: url(../Imagenes/baguette.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed; }
 
 /* Principal About Us*/
 .main_about_us {
@@ -169,13 +198,6 @@ body {
       border: #0b0c0d solid 5px; }
 
 /* Products */
-.products {
-  background-image: url(../Imagenes/marmol.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed; }
-
 .main_products__img {
   height: 85vh;
   display: grid;
@@ -185,7 +207,7 @@ body {
   gap: 20px;
   padding: 20px 0 40px 0;
   position: relative; }
-  .main_products__img h2 {
+  .main_products__img .h2-producto {
     font-size: 4.0em;
     -webkit-text-fill-color: #F2EDE5;
     -webkit-text-stroke: 1px;
@@ -194,8 +216,32 @@ body {
     position: absolute;
     bottom: 40px;
     left: 20px; }
-  .main_products__img__panificados {
-    grid-area: pan; }
+  .main_products__img__panificados, .main_products__img__catering, .main_products__img__tortas, .main_products__img__confiteria {
+    grid-area: pan;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden; }
+    .main_products__img__panificados .hover-text, .main_products__img__catering .hover-text, .main_products__img__tortas .hover-text, .main_products__img__confiteria .hover-text {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      background: rgba(242, 237, 229, 0.5);
+      transition: all 400ms ease-out;
+      opacity: 0;
+      visibility: hidden;
+      text-align: center;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      justify-content: center; }
+    .main_products__img__panificados img, .main_products__img__catering img, .main_products__img__tortas img, .main_products__img__confiteria img {
+      transition: all 400ms ease-out;
+      will-change: transform; }
+    .main_products__img__panificados:hover > .hover-text, .main_products__img__catering:hover > .hover-text, .main_products__img__tortas:hover > .hover-text, .main_products__img__confiteria:hover > .hover-text {
+      opacity: 1;
+      visibility: visible; }
   .main_products__img__catering {
     grid-area: cat; }
   .main_products__img__tortas {
@@ -213,12 +259,26 @@ body {
       border-radius: 10px; }
 
 /*contact us*/
-.body_contact_us {
-  background-image: url(../Imagenes/bread-table.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed; }
+/*HOVER REDES FONDO COLOR CONTACT US */
+.red--instagram:hover {
+  background: #ff7dd8;
+  filter: none;
+  border-radius: 50%; }
+
+.red--facebook:hover {
+  background: #4fa8fb;
+  filter: none;
+  border-radius: 50%; }
+
+.red--whatsapp:hover {
+  background: #009929;
+  filter: none;
+  border-radius: 50%; }
+
+.red--telegram:hover {
+  background: #49a4f5;
+  filter: none;
+  border-radius: 50%; }
 
 .main_contact_us {
   display: grid;
@@ -286,42 +346,13 @@ body {
         border-radius: 5px; }
 
 /* FIND US*/
-.backround_find_us {
-  background-image: url(../Imagenes/pancortado.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed; }
-
 .info_ubicacion {
-  font-size: 2em; }
+  font-size: 2.2em; }
   .info_ubicacion h2 {
     font-size: 3.5em; }
 
 /*Querys*/
 @media screen and (max-width: 560px) {
-  /*header responsive*/
-  /* .header_bakery__menu {
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 3rem;
-
-    }
-
-    .header_bakery {
-        
-        flex-wrap: wrap;
-
-
-
-    }
-
-    .header_bakery__nav {
-        font-size: 1.5em;
-        gap: 2rem;
-        flex-basis: auto;
-    }*/
-  /* index responsive*/
   .principal_bakery {
     justify-content: center;
     align-items: center;

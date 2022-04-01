@@ -1,16 +1,13 @@
 /*contact us*/
-
-.body_contact_us {
-    background-image: url(../Imagenes/bread-table.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-
-
-
+/*HOVER REDES FONDO COLOR CONTACT US */ 
+@each $red,
+$color in $redes {
+    .red--#{$red}:hover {
+        background: $color;
+        filter: none;
+        border-radius: 50%;
+    }
 }
-
 .main_contact_us {
     display: grid;
     height: 100%;
@@ -40,8 +37,13 @@
             & img {
                 height: 50px;
                 filter: invert(88%) sepia(2%) saturate(925%) hue-rotate(341deg) brightness(111%) contrast(90%);
+
+                
+
+                
             
             }
+
 
             & a {
                 flex-direction: row-reverse;

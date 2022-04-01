@@ -14,5 +14,43 @@
     margin: 0 auto;
 
 }
+/*BACKROUND DE TODAS LAS PAGINAS*/
+@each $bg-image in baguette,
+breadtable,
+pancortado,
+panaderia2,
+marmol {
+    .#{$bg-image} {
+        background-image:url("../imagenes/#{$bg-image}.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
 
 
+
+/*MIXIN HOVER TEXT PRODUCTOS */
+@mixin hover-text($color:rgba(242, 237, 229, 0.5), $h:100%, $w:100%) {
+    
+    height: $h;
+    width: $w;
+    position: absolute;
+    top: 0;
+    background: $color;
+    transition: all 400ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    
+
+
+
+
+}

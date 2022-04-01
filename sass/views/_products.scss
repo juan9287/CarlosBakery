@@ -1,14 +1,5 @@
 /* Products */
 
-.products {
-    background-image: url(../Imagenes/marmol.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-
-
-}
 
 .main_products__img {
     height: 85vh;
@@ -21,8 +12,8 @@
     gap: 20px;
     padding: 20px 0 40px 0;
     position: relative;
-    
-    & h2 {
+
+    .h2-producto{
         font-size: 4.0em;
         -webkit-text-fill-color: #F2EDE5;
         -webkit-text-stroke: 1px;
@@ -31,22 +22,53 @@
         position: absolute;
         bottom: 40px;
         left: 20px;
+
     }
+
 
     &__panificados {
         grid-area: pan;
-    }
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+
+        .hover-text{
+        @include hover-text;
+        
+}
+
+        img {
+            transition: all 400ms ease-out;
+            will-change: transform;
+        }
+        
+ 
+        
+        &:hover>.hover-text {
+            opacity: 1;
+            visibility: visible;
+        }
     
+
+
+
+    }
+
     &__catering {
+        @extend .main_products__img__panificados;
+        
         grid-area: cat;
+        
     }
-    
+
     &__tortas {
         grid-area: tor;
+        @extend .main_products__img__panificados;
     }
-    
+
     &__confiteria {
         grid-area: conf;
+        @extend .main_products__img__panificados;
     }
 
     .grid_items {
@@ -54,19 +76,17 @@
         width: 100%;
         position: relative;
 
+
+
         & img {
             height: 100%;
             width: 100%;
             object-fit: cover;
             border-radius: 10px;
+
+
         }
+       
+
     }
 }
-
-
-
-
-
-
-
-

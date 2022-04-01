@@ -54,35 +54,35 @@ ol, ul {
 
 /*BACKROUND DE TODAS LAS PAGINAS*/
 .baguette {
-  background-image: url("../imagenes/baguette.jpg");
+  background-image: url("../Imagenes/baguette.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed; }
 
 .breadtable {
-  background-image: url("../imagenes/breadtable.jpg");
+  background-image: url("../Imagenes/breadtable.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed; }
 
 .pancortado {
-  background-image: url("../imagenes/pancortado.jpg");
+  background-image: url("../Imagenes/pancortado.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed; }
 
 .panaderia2 {
-  background-image: url("../imagenes/panaderia2.jpg");
+  background-image: url("../Imagenes/panaderia2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed; }
 
 .marmol {
-  background-image: url("../imagenes/marmol.jpg");
+  background-image: url("../Imagenes/marmol.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

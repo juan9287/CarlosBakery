@@ -4,14 +4,6 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        
-        &__img{
-            width: 100%;
-            
-        }
-      
-        
-
       }
       
 
@@ -103,12 +95,7 @@
         flex-direction: column;
     }
 }
-@media screen and (max-width:768px){
-    .navbar>.container{
-     
-        justify-content: center;
-    }
-}
+
             
 
     

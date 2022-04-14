@@ -1,14 +1,62 @@
-
 /* contenido */
 .principal_bakery {
     justify-content: center;
     align-items: center;
-  
-
-  
-  
     
+    
+    .picture {
+        background-color: rgba(242, 237, 229, 0.5);
+        border-radius: 50%;
+        height: 36rem;
+        width: 36rem;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        position: absolute;
+
+        .principal_bakery__img {
+            position: absolute;
+        }
+
+    }
+
+    @media screen and (max-width:515px) {
+        .picture {
+            height: 25rem;
+            width: 25rem;
+
+            .principal_bakery__img {
+                position: absolute;
+                height: 130%;
+                width: 130%;
+            }
+
+
+        }
+    }
 }
+.slider {
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    &__content {
+        height: inherit;
+        width: inherit;
+
+        .carousel-item {
+
+            height: inherit;
+            width: inherit;
 
 
 
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

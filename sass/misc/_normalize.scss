@@ -1,8 +1,6 @@
 
 /*imports*/
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@1,100&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&family=Square+Peg&display=swap');
 /*normalize*/
 
 *,
@@ -39,9 +37,16 @@ body {
     font-family: inherit;
     color: inherit;
 }
-.navbar{
-    padding: 0;
-}
+
 ol, ul {
     padding-left: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+img, svg {
+    vertical-align: none;
   }

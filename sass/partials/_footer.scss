@@ -2,7 +2,7 @@
 
 .footer_bakery {
     background: rgba(242, 237, 229, 0.5);
-    height: 5vh;
+    height: 10rem;
     align-content: space-between;
     width: 100%;
 
@@ -11,49 +11,64 @@
         justify-content: space-between;
         line-height: 0%;
         height: 100%;
+        align-items: center;
+        padding: 3rem;
+        gap: 3rem;
 
         &__redes {
             flex-basis: 40%;
             justify-content: space-between;
             height: 5VH;
+            gap: 2rem;
 
             & li a {
-                height: 0;
+
 
                 & img {
-                    height: 5VH;
+                    height: 5rem;
                     line-height: 0%;
-                
-                
                 }
-                
-                
-            
-            
+
             }
         }
 
         & h3 {
-            font: var(--font-primary);
+            font-family: $font-secondary;
             color: black;
-            font-size: 1.7em;
+            font-size: map-get($font-size, large);
             flex-basis: 60%;
             align-self: center;
-        
+
+        }
+
+        @media screen and (max-width:607px) {
+
+            h3 {
+                text-align: center;
+                font-size: map-get($font-size, medium);
+
+            }
         }
 
 
-    
-    
+
+
+    }
+
+    @media screen and (max-width:515px) {
+        &__nav {
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+            line-height: 0%;
+            height: 100%;
+            align-items: center;
+            padding: 1rem;
+            gap: 1rem;
+        }
+
     }
 
 
 
+
 }
-
-
-
-
-
-
-

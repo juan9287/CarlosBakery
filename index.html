@@ -67,25 +67,45 @@
         </nav>
 
     </header>
-    <section id="carouselExampleControls" class="slider carousel slide position-absolute" data-ride="carousel">
-        <div class="slider__content carousel-inner">
-        <div class="carousel-item active"><img class="slider__img" src="./Imagenes/slide1.jpg" alt=""></div>
-        <div class="carousel-item"><img class="slider__img" src="./Imagenes/slide2.jpg" alt=""></div>
-        <div class="carousel-item"><img class="slider__img" src="./Imagenes/slide3.jpg" alt=""></div>
-        <div class="carousel-item"><img class="slider__img" src="./Imagenes/slide4.jpg" alt=""></div>
-        <div class="carousel-item"><img class="slider__img" src="./Imagenes/slide5.jpg" alt=""></div>
-        <div class="carousel-item"><img class="slider__img" src="./Imagenes/slide6.jpg" alt=""></div>
 
+    <!-- Carousel -->
+    <div id="carousel_panaderia" class="carousel slide slider position-absolute" data-bs-ride="carousel">
+
+        <!-- arousel -->
+        <div class="carousel-inner slider__content ">
+            <div class="carousel-item active">
+                <img src="./Imagenes/slide1.jpg" alt="Imagen panaderia" class="d-block ">
+            </div>
+            <div class="carousel-item">
+                <img src="./Imagenes/slide2.jpg" alt="Imagen panaderia" class="d-block">
+            </div>
+            <div class="carousel-item">
+                <img src="./Imagenes/slide3.jpg" alt="Imagen panaderia" class="d-block">
+            </div>
+            <div class="carousel-item ">
+                <img src="./Imagenes/slide4.jpg" alt="Imagen panaderia" class="d-block ">
+            </div>
+            <div class="carousel-item">
+                <img src="./Imagenes/slide5.jpg" alt="Imagen panaderia" class="d-block">
+            </div>
+            <div class="carousel-item">
+                <img src="./Imagenes/slide6.jpg" alt="Imagen panaderia" class="d-block">
+            </div>
         </div>
 
-    </section>
+
+    </div>
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel_panaderia" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel_panaderia" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
     <main class="principal_bakery container d-flex flex-row">
         <!--Centro de pagina-->
-
-
         <picture class="picture"> <img class="principal_bakery__img" src="./Imagenes/carlo's bakery.png"></picture>
-
-
     </main>
     <footer class="footer_bakery ">
         <!--Pie de pagina-->

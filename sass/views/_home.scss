@@ -14,9 +14,11 @@
         align-items: center;
         display: flex;
         position: absolute;
+        z-index: 1;
 
         .principal_bakery__img {
             position: absolute;
+            z-index: -1;
         }
 
     }
@@ -35,22 +37,26 @@
 
         }
     }
+    @media screen and (max-width:770px) {
+        .principal_bakery {
+            position: relative;
+        }
+        
+    }
+
 }
 .slider {
     height: 100%;
     width: 100%;
     z-index: -1;
-
     &__content {
         height: inherit;
         width: inherit;
-
+        z-index: 1;
         .carousel-item {
 
             height: inherit;
             width: inherit;
-
-
 
             img {
                 object-fit: cover;

@@ -17,14 +17,15 @@
 
 
 .header_bakery {
-
-    
     background: rgba(242, 237, 229, 0.5);
-    min-height: 10vh;
+    min-height: 10rem;
     width: 100%;
     animation-name: animacion_header;
     animation-duration: 2s;
     animation-iteration-count: 1;
+    z-index: 1;
+    position: relative;
+    
 
     &__menu {
         justify-content: space-between;

@@ -114,11 +114,13 @@ img, svg {
 
 .header_bakery {
   background: rgba(242, 237, 229, 0.5);
-  min-height: 10vh;
+  min-height: 10rem;
   width: 100%;
   animation-name: animacion_header;
   animation-duration: 2s;
-  animation-iteration-count: 1; }
+  animation-iteration-count: 1;
+  z-index: 1;
+  position: relative; }
   .header_bakery__menu {
     justify-content: space-between;
     align-items: center;
@@ -171,7 +173,8 @@ img, svg {
   background: rgba(242, 237, 229, 0.5);
   height: 10rem;
   align-content: space-between;
-  width: 100%; }
+  width: 100%;
+  z-index: 1; }
   .footer_bakery__nav {
     justify-content: space-between;
     line-height: 0%;
@@ -221,9 +224,11 @@ img, svg {
     justify-content: center;
     align-items: center;
     display: flex;
-    position: absolute; }
+    position: absolute;
+    z-index: 1; }
     .principal_bakery .picture .principal_bakery__img {
-      position: absolute; }
+      position: absolute;
+      z-index: -1; }
   @media screen and (max-width: 515px) {
     .principal_bakery .picture {
       height: 25rem;
@@ -232,6 +237,9 @@ img, svg {
         position: absolute;
         height: 130%;
         width: 130%; } }
+  @media screen and (max-width: 770px) {
+    .principal_bakery .principal_bakery {
+      position: relative; } }
 
 .slider {
   height: 100%;
@@ -239,7 +247,8 @@ img, svg {
   z-index: -1; }
   .slider__content {
     height: inherit;
-    width: inherit; }
+    width: inherit;
+    z-index: 1; }
     .slider__content .carousel-item {
       height: inherit;
       width: inherit; }

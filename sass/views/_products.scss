@@ -1,54 +1,69 @@
 /* Products */
 
 
-.main_products__img {
-    height: 85vh;
+.main_products__img  {
+    height: 79vh;
     display: grid;
     grid-template-areas:
         "pan cat tor"
         "pan conf conf";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50% 50%;
-    gap: 20px;
-    padding: 20px 0 40px 0;
-    position: relative;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 50%;
+    gap: 2rem;
+    padding: 2rem;
+    
 
-    .h2-producto{
-        font-size: 4.0em;
-        -webkit-text-fill-color: #F2EDE5;
-        -webkit-text-stroke: 1px;
-        -webkit-text-stroke-color: rgba(11, 12, 13, 0.5);
-        line-height: 0px;
+
+    .h2-producto {
+        font-size: map-get($font-size, x-large);
+        background-color: rgba(242, 237, 229, 0.5);
+        font-family: $font-secondary;
         position: absolute;
-        bottom: 40px;
-        left: 20px;
+        align-self: flex-end;
+        padding: 1rem 2rem;
+        border-radius:1rem;
+        margin-bottom: 1rem;
+        
 
     }
 
-
+    &__panificados:hover{
+        .h2-producto{
+            visibility: hidden;
+        }
+    }
     &__panificados {
         grid-area: pan;
         position: relative;
         cursor: pointer;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        .hover-text {
+            @include hover-text;
+            font-family: $font-secondary;
+            gap: 4rem;
 
-        .hover-text{
-        @include hover-text;
-        
-}
+
+            h2 {
+                font-size: map-get($font-size, medium);
+            }
+
+        }
+
+
+
+        &:hover>.hover-text {
+            opacity: 1;
+            visibility: visible;
+            
+        }
 
         img {
             transition: all 400ms ease-out;
             will-change: transform;
         }
-        
- 
-        
-        &:hover>.hover-text {
-            opacity: 1;
-            visibility: visible;
-        }
-    
+
 
 
 
@@ -56,9 +71,9 @@
 
     &__catering {
         @extend .main_products__img__panificados;
-        
+
         grid-area: cat;
-        
+
     }
 
     &__tortas {
@@ -86,7 +101,19 @@
 
 
         }
-       
 
+
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    .main_products__img {
+
+        grid-template-areas:
+            "pan cat "
+            "tor conf";
+        grid-template-columns: auto auto;
+        grid-template-rows: 50% 50%;
     }
 }

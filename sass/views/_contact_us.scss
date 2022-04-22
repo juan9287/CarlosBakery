@@ -1,13 +1,6 @@
 /*contact us*/
-/*HOVER REDES FONDO COLOR CONTACT US */ 
-@each $red,
-$color in $redes {
-    .red--#{$red}:hover {
-        background: $color;
-        filter: none;
-        border-radius: 50%;
-    }
-}
+
+
 .main_contact_us {
     display: grid;
     height: 100%;
@@ -23,25 +16,31 @@ $color in $redes {
         font-size: 5.0em;
         color: $principal;
         letter-spacing: 2px;
-        -webkit-text-stroke: 1px;
-        -webkit-text-stroke-color: rgba(11, 12, 13, 0.8);
+
+        font-family: $font-secondary;
     }
-    
-    &__section{
+
+    &__section {
         justify-content: space-between;
         height: auto;
-        
+
         &__redes {
             gap: 3rem;
+            align-items: flex-start;
 
             & img {
                 height: 50px;
                 filter: invert(88%) sepia(2%) saturate(925%) hue-rotate(341deg) brightness(111%) contrast(90%);
+            }
 
-                
-
-                
-            
+            /*HOVER REDES FONDO COLOR CONTACT US */
+            @each $red,
+            $color in $redes {
+                .red--#{$red}:hover {
+                    background: $color;
+                    filter: none;
+                    border-radius: 50%;
+                }
             }
 
 
@@ -51,27 +50,24 @@ $color in $redes {
                 justify-content: flex-end;
                 gap: 2rem;
                 font-family: $font-secondary;
-            
-            
-            
             }
+
             .items a h2 {
                 font-size: 2.0em;
                 color: $principal;
-            
             }
-            
+
         }
 
-           /* formulario*/
+        /* formulario*/
         &__form {
 
             width: fit-content;
             gap: 1rem;
             justify-content: space-around;
-    
+
             .informacion {
-    
+
                 width: 31rem;
                 font-weight: bold;
                 border: none;
@@ -79,6 +75,7 @@ $color in $redes {
                 background: none;
                 border-bottom: #F2EDE5 1px solid;
             }
+
             textarea {
                 height: 12rem;
                 width: 31rem;
@@ -86,44 +83,42 @@ $color in $redes {
                 background: none;
                 border: none;
                 border-bottom: #F2EDE5 1px solid;
-    
+
                 &::placeholder {
                     color: rgba(242, 237, 229, 0.5);
                     font-family: $font-secondary;
-                    ;
+                    font-size: map-get($font-size, medium);
                 }
-            
-            
+
+
             }
-            & input::placeholder {
+
+            .informacion::placeholder {
                 color: rgba(242, 237, 229, 0.5);
                 font-family: $font-secondary;
+                font-size: map-get($font-size, medium);
             }
-    
+
             .boton_send {
                 background-color: rgba(242, 237, 229, 0.8);
-            
                 width: 10rem;
                 align-self: center;
-                font-family: $font-primary;
+                font-family: $font-secondary;
                 border-radius: 5px;
+                height: 5rem;
+                font-size: map-get($font-size, medium);
+                font-weight: bold;
             }
-            
-        
+
+
         }
 
 
     }
 
- 
 
-   
-    
+
+
+
 
 }
-
-
-
-
-
-

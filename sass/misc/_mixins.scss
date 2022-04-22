@@ -41,7 +41,6 @@ marmol {
     height: $h;
     width: $w;
     position: absolute;
-    top: 0;
     background: $color;
     transition: all 400ms ease-out;
     opacity: 0;
@@ -50,8 +49,10 @@ marmol {
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
     justify-content: center;
+    font-size: large;
+    text-align: left;
+    align-items: center;
     
 
 

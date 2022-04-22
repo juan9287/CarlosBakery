@@ -258,7 +258,7 @@ img, svg {
         height: 100%; }
 
 /* Principal About Us*/
-.main_about_us {
+.main_about_us, .about_us_responsive {
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -266,53 +266,65 @@ img, svg {
   .main_about_us__text {
     width: 50%;
     background-color: rgba(242, 237, 229, 0.5);
+    font-family: "Montserrat", cursive;
     font-size: 1.7em;
     justify-content: space-around;
     align-items: center;
     width: 50rem;
-    height: 63rem; }
+    height: 63rem;
+    border-radius: 5px; }
     .main_about_us__text__texto_historia {
       padding: 2rem;
       gap: 3rem;
       width: 100%; }
     .main_about_us__text h2 {
-      font-size: 3em; }
+      font-size: 3.5em;
+      font-family: "Montserrat", cursive;
+      font-weight: bolder;
+      text-align: center; }
   .main_about_us__img {
     width: 50%;
     width: 50rem; }
     .main_about_us__img img {
       width: 100%;
-      border: #0b0c0d solid 5px; }
+      border: #0b0c0d solid 5px;
+      border-radius: 5px; }
+
+.about_us_responsive {
+  visibility: hidden;
+  position: absolute; }
 
 /* Products */
 .main_products__img {
-  height: 85vh;
+  height: 79vh;
   display: grid;
   grid-template-areas: "pan cat tor" "pan conf conf";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 50% 50%;
-  gap: 20px;
-  padding: 20px 0 40px 0;
-  position: relative; }
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 50%;
+  gap: 2rem;
+  padding: 2rem; }
   .main_products__img .h2-producto {
-    font-size: 4.0em;
-    -webkit-text-fill-color: #F2EDE5;
-    -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: rgba(11, 12, 13, 0.5);
-    line-height: 0px;
+    font-size: 3.5em;
+    background-color: rgba(242, 237, 229, 0.5);
+    font-family: "Montserrat", cursive;
     position: absolute;
-    bottom: 40px;
-    left: 20px; }
+    align-self: flex-end;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem; }
+  .main_products__img__panificados:hover .h2-producto, .main_products__img__catering:hover .h2-producto, .main_products__img__tortas:hover .h2-producto, .main_products__img__confiteria:hover .h2-producto {
+    visibility: hidden; }
   .main_products__img__panificados, .main_products__img__catering, .main_products__img__tortas, .main_products__img__confiteria {
     grid-area: pan;
     position: relative;
     cursor: pointer;
-    overflow: hidden; }
+    overflow: hidden;
+    display: flex;
+    justify-content: center; }
     .main_products__img__panificados .hover-text, .main_products__img__catering .hover-text, .main_products__img__tortas .hover-text, .main_products__img__confiteria .hover-text {
       height: 100%;
       width: 100%;
       position: absolute;
-      top: 0;
       background: rgba(242, 237, 229, 0.5);
       transition: all 400ms ease-out;
       opacity: 0;
@@ -321,14 +333,20 @@ img, svg {
       border-radius: 1rem;
       display: flex;
       flex-direction: column;
-      gap: 3rem;
-      justify-content: center; }
-    .main_products__img__panificados img, .main_products__img__catering img, .main_products__img__tortas img, .main_products__img__confiteria img {
-      transition: all 400ms ease-out;
-      will-change: transform; }
+      justify-content: center;
+      font-size: large;
+      text-align: left;
+      align-items: center;
+      font-family: "Montserrat", cursive;
+      gap: 4rem; }
+      .main_products__img__panificados .hover-text h2, .main_products__img__catering .hover-text h2, .main_products__img__tortas .hover-text h2, .main_products__img__confiteria .hover-text h2 {
+        font-size: 1.7em; }
     .main_products__img__panificados:hover > .hover-text, .main_products__img__catering:hover > .hover-text, .main_products__img__tortas:hover > .hover-text, .main_products__img__confiteria:hover > .hover-text {
       opacity: 1;
       visibility: visible; }
+    .main_products__img__panificados img, .main_products__img__catering img, .main_products__img__tortas img, .main_products__img__confiteria img {
+      transition: all 400ms ease-out;
+      will-change: transform; }
   .main_products__img__catering {
     grid-area: cat; }
   .main_products__img__tortas {
@@ -345,28 +363,13 @@ img, svg {
       object-fit: cover;
       border-radius: 10px; }
 
+@media screen and (max-width: 800px) {
+  .main_products__img {
+    grid-template-areas: "pan cat " "tor conf";
+    grid-template-columns: auto auto;
+    grid-template-rows: 50% 50%; } }
+
 /*contact us*/
-/*HOVER REDES FONDO COLOR CONTACT US */
-.red--instagram:hover {
-  background: #ff7dd8;
-  filter: none;
-  border-radius: 50%; }
-
-.red--facebook:hover {
-  background: #4fa8fb;
-  filter: none;
-  border-radius: 50%; }
-
-.red--whatsapp:hover {
-  background: #009929;
-  filter: none;
-  border-radius: 50%; }
-
-.red--telegram:hover {
-  background: #49a4f5;
-  filter: none;
-  border-radius: 50%; }
-
 .main_contact_us {
   display: grid;
   height: 100%;
@@ -381,17 +384,34 @@ img, svg {
     font-size: 5.0em;
     color: #F2EDE5;
     letter-spacing: 2px;
-    -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: rgba(11, 12, 13, 0.8); }
+    font-family: "Montserrat", cursive; }
   .main_contact_us__section {
     justify-content: space-between;
     height: auto;
     /* formulario*/ }
     .main_contact_us__section__redes {
-      gap: 3rem; }
+      gap: 3rem;
+      align-items: flex-start;
+      /*HOVER REDES FONDO COLOR CONTACT US */ }
       .main_contact_us__section__redes img {
         height: 50px;
         filter: invert(88%) sepia(2%) saturate(925%) hue-rotate(341deg) brightness(111%) contrast(90%); }
+      .main_contact_us__section__redes .red--instagram:hover {
+        background: #ff7dd8;
+        filter: none;
+        border-radius: 50%; }
+      .main_contact_us__section__redes .red--facebook:hover {
+        background: #4fa8fb;
+        filter: none;
+        border-radius: 50%; }
+      .main_contact_us__section__redes .red--whatsapp:hover {
+        background: #009929;
+        filter: none;
+        border-radius: 50%; }
+      .main_contact_us__section__redes .red--telegram:hover {
+        background: #49a4f5;
+        filter: none;
+        border-radius: 50%; }
       .main_contact_us__section__redes a {
         flex-direction: row-reverse;
         align-items: center;
@@ -421,16 +441,21 @@ img, svg {
         border-bottom: #F2EDE5 1px solid; }
         .main_contact_us__section__form textarea::placeholder {
           color: rgba(242, 237, 229, 0.5);
-          font-family: "Montserrat", cursive; }
-      .main_contact_us__section__form input::placeholder {
+          font-family: "Montserrat", cursive;
+          font-size: 1.7em; }
+      .main_contact_us__section__form .informacion::placeholder {
         color: rgba(242, 237, 229, 0.5);
-        font-family: "Montserrat", cursive; }
+        font-family: "Montserrat", cursive;
+        font-size: 1.7em; }
       .main_contact_us__section__form .boton_send {
         background-color: rgba(242, 237, 229, 0.8);
         width: 10rem;
         align-self: center;
-        font-family: "Lobster", cursive;
-        border-radius: 5px; }
+        font-family: "Montserrat", cursive;
+        border-radius: 5px;
+        height: 5rem;
+        font-size: 1.7em;
+        font-weight: bold; }
 
 /* FIND US*/
 .info_ubicacion {
@@ -479,7 +504,7 @@ img, svg {
     width: 100%; } }
 
 @media screen and (max-width: 1040px) {
-  .main_about_us {
+  .main_about_us, .about_us_responsive {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;

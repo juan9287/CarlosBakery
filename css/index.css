@@ -294,6 +294,23 @@ img, svg {
   visibility: hidden;
   position: absolute; }
 
+@media screen and (max-width: 1040px) {
+  .main_about_us, .about_us_responsive {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem; } }
+
+@media screen and (max-width: 560px) {
+  .main_about_us__img {
+    width: 100%; }
+  .main_about_us__text {
+    font-size: 1.5em;
+    width: 100%; }
+    .main_about_us__text h2 {
+      font-size: 2.7em; } }
+
 /* Products */
 .main_products__img {
   height: 79vh;
@@ -314,6 +331,9 @@ img, svg {
     margin-bottom: 1rem; }
   .main_products__img__panificados:hover .h2-producto, .main_products__img__catering:hover .h2-producto, .main_products__img__tortas:hover .h2-producto, .main_products__img__confiteria:hover .h2-producto {
     visibility: hidden; }
+  .main_products__img__panificados:hover .hover-text, .main_products__img__catering:hover .hover-text, .main_products__img__tortas:hover .hover-text, .main_products__img__confiteria:hover .hover-text {
+    opacity: 1;
+    visibility: visible; }
   .main_products__img__panificados, .main_products__img__catering, .main_products__img__tortas, .main_products__img__confiteria {
     grid-area: pan;
     position: relative;
@@ -330,7 +350,6 @@ img, svg {
       opacity: 0;
       visibility: hidden;
       text-align: center;
-      border-radius: 1rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -341,9 +360,6 @@ img, svg {
       gap: 4rem; }
       .main_products__img__panificados .hover-text h2, .main_products__img__catering .hover-text h2, .main_products__img__tortas .hover-text h2, .main_products__img__confiteria .hover-text h2 {
         font-size: 1.7em; }
-    .main_products__img__panificados:hover > .hover-text, .main_products__img__catering:hover > .hover-text, .main_products__img__tortas:hover > .hover-text, .main_products__img__confiteria:hover > .hover-text {
-      opacity: 1;
-      visibility: visible; }
     .main_products__img__panificados img, .main_products__img__catering img, .main_products__img__tortas img, .main_products__img__confiteria img {
       transition: all 400ms ease-out;
       will-change: transform; }
@@ -360,14 +376,27 @@ img, svg {
     .main_products__img .grid_items img {
       height: 100%;
       width: 100%;
-      object-fit: cover;
-      border-radius: 10px; }
+      object-fit: cover; }
 
 @media screen and (max-width: 800px) {
   .main_products__img {
     grid-template-areas: "pan cat " "tor conf";
     grid-template-columns: auto auto;
     grid-template-rows: 50% 50%; } }
+
+@media screen and (max-width: 560px) {
+  /*RESPONSIVE PRODUCTS*/
+  .main_products__img {
+    display: flex;
+    flex-direction: column;
+    height: fit-content; }
+  .main_products__img .grid_items img {
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 40px; }
+  .hover-text {
+    border-radius: 40px; } }
 
 /*contact us*/
 .main_contact_us {
@@ -377,11 +406,11 @@ img, svg {
   grid-template-rows: auto auto;
   align-content: space-evenly;
   gap: 10rem;
-  padding: 2rem 5rem; }
+  padding: 2rem 2rem; }
   .main_contact_us h1 {
     justify-self: center;
     align-self: center;
-    font-size: 5.0em;
+    font-size: 5em;
     color: #F2EDE5;
     letter-spacing: 2px;
     font-family: "Montserrat", cursive; }
@@ -425,11 +454,11 @@ img, svg {
         font-size: 2.0em;
         color: #F2EDE5; }
     .main_contact_us__section__form {
-      width: fit-content;
+      width: 25rem;
       gap: 1rem;
       justify-content: space-around; }
       .main_contact_us__section__form .informacion {
-        width: 31rem;
+        width: 100%;
         font-weight: bold;
         border: none;
         outline: none;
@@ -438,7 +467,7 @@ img, svg {
         height: 3rem; }
       .main_contact_us__section__form textarea {
         height: 12rem;
-        width: 31rem;
+        width: 100%;
         font-weight: bold;
         background: none;
         border: none;
@@ -506,29 +535,3 @@ img, svg {
       height: 35rem; } }
 
 /*Querys*/
-@media screen and (max-width: 560px) {
-  /*RESPONSIVE PRODUCTS*/
-  .main_products__img {
-    display: flex;
-    flex-direction: column;
-    height: fit-content; }
-  .main_products__img .grid_items img {
-    height: 25rem;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 40px;
-    padding: 0 1rem; }
-  /*About US responsive*/
-  .main_about_us__img {
-    width: 100%; }
-  .main_about_us__text {
-    font-size: 1.5em;
-    width: 100%; } }
-
-@media screen and (max-width: 1040px) {
-  .main_about_us, .about_us_responsive {
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 2rem; } }

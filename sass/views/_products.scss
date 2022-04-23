@@ -31,6 +31,12 @@
         .h2-producto{
             visibility: hidden;
         }
+        .hover-text {
+            opacity: 1;
+            visibility: visible;
+            
+        }
+
     }
     &__panificados {
         grid-area: pan;
@@ -43,20 +49,13 @@
             @include hover-text;
             font-family: $font-secondary;
             gap: 4rem;
+            
 
 
             h2 {
                 font-size: map-get($font-size, medium);
             }
 
-        }
-
-
-
-        &:hover>.hover-text {
-            opacity: 1;
-            visibility: visible;
-            
         }
 
         img {
@@ -97,7 +96,7 @@
             height: 100%;
             width: 100%;
             object-fit: cover;
-            border-radius: 10px;
+            
 
 
         }
@@ -116,4 +115,28 @@
         grid-template-columns: auto auto;
         grid-template-rows: 50% 50%;
     }
+}
+@media screen and (max-width: 560px) {
+    /*RESPONSIVE PRODUCTS*/
+    .main_products__img {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        
+    }
+
+
+    .main_products__img .grid_items img {
+        height: 25rem;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 40px;
+        
+    }
+    .hover-text {
+
+        border-radius: 40px;
+        
+    }
+
 }

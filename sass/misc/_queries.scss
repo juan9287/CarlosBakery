@@ -1,46 +1,4 @@
 @media screen and (max-width: 560px) {
-
-    .principal_bakery {
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-      }
-      
-
-    /*contact us responsive*/
-
-
-    .main_contact_us__section {
-
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 2rem;
-        gap: 10rem;
-
-    }
-
-    .main_contact_us__section__redes {
-        flex-grow: 1;
-        flex-wrap: wrap;
-        align-content: center;
-
-    }
-
-    .main_contact_us__section__form {
-        flex-grow: 1;
-        order: -1;
-        align-items: center;
-
-    }
-
-
-
-    .main_contact_us {
-        gap: 0
-    }
-
-
-
     /*RESPONSIVE PRODUCTS*/
     .main_products__img {
         display: flex;

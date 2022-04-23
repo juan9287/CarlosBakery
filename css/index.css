@@ -376,7 +376,8 @@ img, svg {
     .main_products__img .grid_items img {
       height: 100%;
       width: 100%;
-      object-fit: cover; }
+      object-fit: cover;
+      border-radius: 2rem; }
 
 @media screen and (max-width: 800px) {
   .main_products__img {

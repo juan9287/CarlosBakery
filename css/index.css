@@ -374,10 +374,10 @@ img, svg {
   display: grid;
   height: 100%;
   width: 100%;
-  align-self: center;
   grid-template-rows: auto auto;
-  align-content: center;
-  gap: 10rem; }
+  align-content: space-evenly;
+  gap: 10rem;
+  padding: 0 5rem; }
   .main_contact_us h1 {
     justify-self: center;
     align-self: center;
@@ -388,6 +388,8 @@ img, svg {
   .main_contact_us__section {
     justify-content: space-between;
     height: auto;
+    gap: 5rem;
+    flex-wrap: wrap;
     /* formulario*/ }
     .main_contact_us__section__redes {
       gap: 3rem;
@@ -458,10 +460,41 @@ img, svg {
         font-weight: bold; }
 
 /* FIND US*/
-.info_ubicacion {
-  font-size: 2.7em; }
-  .info_ubicacion h2 {
-    font-size: 3.5em; }
+.find_us_main {
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 5rem;
+  height: 100%; }
+  .find_us_main .find_us__frame {
+    width: 50rem;
+    height: 50rem; }
+    .find_us_main .find_us__frame .iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem; }
+  .find_us_main .find_us__info {
+    font-size: 2.7em;
+    font-family: "Montserrat", cursive;
+    gap: 4rem;
+    text-align: center; }
+    .find_us_main .find_us__info h3 {
+      font-size: 1.7em; }
+    .find_us_main .find_us__info .etiqueta_1, .find_us_main .find_us__info .etiqueta_2 {
+      background-color: rgba(242, 237, 229, 0.5);
+      border-radius: 1rem;
+      height: auto;
+      width: auto; }
+
+@media screen and (max-width: 900px) {
+  .find_us_main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem; }
+    .find_us_main .find_us__frame {
+      width: 80%;
+      height: 35rem; } }
 
 /*Querys*/
 @media screen and (max-width: 560px) {
@@ -469,7 +502,7 @@ img, svg {
     justify-content: center;
     align-items: center;
     width: 100%; }
-  /*contacr us responsive*/
+  /*contact us responsive*/
   .main_contact_us__section {
     flex-wrap: wrap;
     justify-content: space-around;
@@ -510,9 +543,3 @@ img, svg {
     flex-wrap: wrap;
     gap: 2rem;
     padding: 2rem; } }
-
-@media screen and (max-width: 650px) {
-  .find_us__frame iframe {
-    width: 100%; }
-  .find_us_main {
-    flex-direction: column; } }

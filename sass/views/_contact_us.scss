@@ -5,10 +5,12 @@
     display: grid;
     height: 100%;
     width: 100%;
-    align-self: center;
+    
     grid-template-rows: auto auto;
-    align-content: center;
+    align-content: space-evenly;
     gap: 10rem;
+    padding: 0 5rem;
+    
 
     & h1 {
         justify-self: center;
@@ -23,6 +25,8 @@
     &__section {
         justify-content: space-between;
         height: auto;
+        gap:5rem;
+        flex-wrap: wrap;
 
         &__redes {
             gap: 3rem;

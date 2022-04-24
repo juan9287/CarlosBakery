@@ -394,12 +394,12 @@ img, svg {
     display: flex;
     flex-direction: column;
     height: fit-content; }
+    .main_products__img .hover-text {
+      border-radius: 4rem; }
   .main_products__img .grid_items img {
     height: 25rem;
     width: 100%;
     object-fit: cover;
-    border-radius: 40px; }
-  .hover-text {
     border-radius: 40px; } }
 
 /*contact us*/

@@ -125,7 +125,11 @@
         display: flex;
         flex-direction: column;
         height: fit-content;
-        
+        .hover-text {
+
+            border-radius: 4rem;
+            
+        }
     }
 
 
@@ -136,10 +140,6 @@
         border-radius: 40px;
         
     }
-    .hover-text {
 
-        border-radius: 40px;
-        
-    }
 
 }

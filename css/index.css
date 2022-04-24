@@ -215,6 +215,8 @@ img, svg {
 .principal_bakery {
   justify-content: center;
   align-items: center; }
+  .principal_bakery button {
+    z-index: 5; }
   .principal_bakery .picture {
     background-color: rgba(242, 237, 229, 0.5);
     border-radius: 50%;

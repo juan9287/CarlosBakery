@@ -347,7 +347,7 @@ img, svg {
       height: 100%;
       width: 100%;
       position: absolute;
-      background: rgba(242, 237, 229, 0.5);
+      background: rgba(242, 237, 229, 0.8);
       transition: all 400ms ease-out;
       opacity: 0;
       visibility: hidden;
@@ -359,7 +359,8 @@ img, svg {
       text-align: left;
       align-items: center;
       font-family: "Montserrat", cursive;
-      gap: 4rem; }
+      gap: 4rem;
+      border-radius: 4rem; }
       .main_products__img__panificados .hover-text h2, .main_products__img__catering .hover-text h2, .main_products__img__tortas .hover-text h2, .main_products__img__confiteria .hover-text h2 {
         font-size: 1.7em; }
     .main_products__img__panificados img, .main_products__img__catering img, .main_products__img__tortas img, .main_products__img__confiteria img {

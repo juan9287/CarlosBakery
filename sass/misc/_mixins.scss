@@ -36,7 +36,7 @@ marmol {
 
 
 /*MIXIN HOVER TEXT PRODUCTOS */
-@mixin hover-text($color:rgba(242, 237, 229, 0.5), $h:100%, $w:100%) {
+@mixin hover-text($color:rgba(242, 237, 229, 0.8), $h:100%, $w:100%) {
     
     height: $h;
     width: $w;
